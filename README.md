@@ -1,20 +1,16 @@
-get_es6_parameter_names
-=======================
-
-Get the names of a function's parameters.
-
 ## USAGE
 
 ```js
-function example(parameter1, parameter2 = 'world') {
-	return "hello" + parameter2;
+function example(a = 'hello', b = 'world') {
+
+	return `${a} ${b}`;
 }
 
 var nameParameters = require('get_es6_parameter_names');
 
-nameParameters(example.toString()) // ["parameter1", "parameter2"]
+nameParameters(example.toString()) // ["a", "b"]
 ```
 
-Unit tests [http://alt-o.net/testing-suite/?grep=Parameter%20Names](http://alt-o.net/testing-suite/?grep=Parameter%20Names)
+Unit tests [http://alt-o.net/testing-suite/?grep=Parameter%20Names](http://alt-o.net/testing-suite/?grep=Parameter%20Names).
 
 Used by [dø](https://www.npmjs.com/package/op_do).
