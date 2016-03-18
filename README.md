@@ -3,7 +3,7 @@
 ```js
     var get = require('get_es6_parameter_names');
 
-    function example(a = 'hello', b = 'world') {
+    function example (a = 'hello', b = 'world') {
 
         return `${a} ${b}`;
     }
