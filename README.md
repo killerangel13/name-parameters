@@ -8,7 +8,7 @@ function example(a = 'hello', b = 'world') {
 	return `${a} ${b}`;
 }
 
-get(example.toString()) // ["a", "b"]
+get(example.toString()); // ["a", "b"]
 
 ```
 
