@@ -1,12 +1,12 @@
 ## USAGE
 
 ```js
-var nameParameters = require('get_es6_parameter_names');
-
 function example(a = 'hello', b = 'world') {
 
 	return `${a} ${b}`;
 }
+
+var nameParameters = require('get_es6_parameter_names');
 
 nameParameters(example.toString()) // ["a", "b"]
 ```
