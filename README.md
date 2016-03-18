@@ -1,14 +1,15 @@
 ## USAGE
 
 ```js
+var get = require('get_es6_parameter_names');
+
 function example(a = 'hello', b = 'world') {
 
 	return `${a} ${b}`;
 }
 
-var nameParameters = require('get_es6_parameter_names');
+get(example.toString()) // ["a", "b"]
 
-nameParameters(example.toString()) // ["a", "b"]
 ```
 
 Unit tests [http://alt-o.net/testing-suite/?grep=Parameter%20Names](http://alt-o.net/testing-suite/?grep=Parameter%20Names).
