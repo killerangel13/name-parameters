@@ -2,7 +2,7 @@
   "name": "get_es6_parameter_names",
   "author": "killerangel13",
   "license": "MIT",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Get the names of a function's parameters.",
   "bugs": {
     "url": "https://github.com/killerangel13/name-parameters/issues"
