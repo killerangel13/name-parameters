@@ -14,4 +14,4 @@
 
 Unit tests [http://alt-o.net/testing-suite/?grep=Parameter%20Names](http://alt-o.net/testing-suite/?grep=Parameter%20Names)
 
-Used by [dø](https://www.npmjs.com/package/op_do).
+Used in [dø](https://www.npmjs.com/package/op_do).
