@@ -1,14 +1,14 @@
 ## USAGE
 
 ```js
-var get = require('get_es6_parameter_names');
+    var get = require('get_es6_parameter_names');
 
-function example(a = 'hello', b = 'world') {
+    function example(a = 'hello', b = 'world') {
 
-	return `${a} ${b}`;
-}
+        return `${a} ${b}`;
+    }
 
-get(example.toString()); // ["a", "b"]
+    get(example.toString()); // ["a", "b"]
 
 ```
 
