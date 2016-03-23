@@ -1,5 +1,5 @@
 /*
- * # nameParameters - 1.0.0
+ * # nameParameters - 1.0.6
  * http://alt-o.net
  *
  * Copyright 2016 Contributors
@@ -16,7 +16,13 @@
 
     function nameParameters(js) {
 
-        var args = [],
+        var names = [],
+            name = "",
+            add = function() {
+                if (name !== "")
+                    names.push(name);
+                name = "";
+            },
             comment = "", /*//*/
             bracket = 0, // []
             brace = 0, // {}
@@ -24,12 +30,11 @@
             quote = "",
             def,
             colon = def = false,
-            arg = "",
             char = "",
             prev = "";
         for(var i=0,len=js.length;i<len;i++) {
             prev = char;
-            char = js.charAt(i);
+            char = js[i];
 
             if (quote !== "") {
                 if (char === quote && prev !== "\\")
@@ -84,12 +89,14 @@
                 continue;
             
             } else if (char === "=") {
+                
+                add();
+                
+                if (js[i+1] === ">")
+                    break;
+
                 def = true;
 
-                if (arg !== "")
-                    args.push(arg);
-
-                arg = "";
                 continue;
 
             } else if (char === "[" || char === "]")
@@ -97,20 +104,18 @@
 
             // Parens
             if (char === "(") {
+
+                if (paren === 0 && name.slice(-8) === "function")
+                    name = "";
+
                 paren++;
 
                 continue;
 
             } else if (paren === 1 && char === ")") {
-
-                if (arg !== "")
-                    args.push(arg);
-
+                add();
                 break;
             }
-
-            if (paren === 0)
-                continue;
 
             // Destructured
             if (char === "," || char === "{")
@@ -132,19 +137,16 @@
                 continue;
 
             if (char === ",") {
-                if (arg !== "")
-                    args.push(arg);
-
-                arg = "";
+                add();
                 continue;
             }
 
             if (whitespace.test(char) || char === ")")
                 continue;
 
-            arg += char;
+            name += char;
         }
-        return args;
+        return names;
     }
     
     var whitespace = /(\s)|(\r)/;
