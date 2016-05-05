@@ -34,7 +34,7 @@
             prev = "";
         for(var i=0,len=js.length;i<len;i++) {
             prev = char;
-            char = js[i];
+            char = js.charAt(i);
 
             if (quote !== "") {
                 if (char === quote && prev !== "\\")
