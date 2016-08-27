@@ -1,4 +1,4 @@
-Unit test [http://alt-o.net/testing-suite/?grep=Parameter%20Names](http://alt-o.net/testing-suite/?grep=Parameter Names)
+Unit test [http://alt-o.net/testing-suite/?grep=Parameter Names](http://alt-o.net/testing-suite/?grep=Parameter%20Names)
 
 Used by [dø](https://www.npmjs.com/package/op_do).
 ## USAGE
