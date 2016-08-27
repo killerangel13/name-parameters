@@ -1,7 +1,6 @@
 Unit test [http://alt-o.net/testing-suite/?grep=Parameter%20Names](http://alt-o.net/testing-suite/?grep=Parameter%20Names)
 
-Used by [dø](https://www.npmjs.com/package/op_do).
-
+From [dø](https://www.npmjs.com/package/op_do).
 ## USAGE
 
 ```js
@@ -13,7 +12,6 @@ Used by [dø](https://www.npmjs.com/package/op_do).
    }
 
    get(example.toString()); // ["a", "b"]
-
 ```
 
 ```js
@@ -25,7 +23,6 @@ Used by [dø](https://www.npmjs.com/package/op_do).
    }
 
    get(example.toString()); // ["a", "b"]
-
 ```
 
 ```js
@@ -37,7 +34,6 @@ Used by [dø](https://www.npmjs.com/package/op_do).
    }
 
    get(example.toString()); // ["a", "b"]
-
 ```
 
 ```js
@@ -49,5 +45,4 @@ Used by [dø](https://www.npmjs.com/package/op_do).
    }
 
    get(example.toString()); // ["a", "...b"]
-
 ```
