@@ -1,6 +1,6 @@
 Used in [dø](https://www.npmjs.com/package/op_do).
 
-Unit test [http://alt-o.net/testing-suite/?grep=Parameter Names](http://alt-o.net/testing-suite/?grep=Parameter%20Names)
+Unit test: [http://alt-o.net/testing-suite/?grep=Parameter Names](http://alt-o.net/testing-suite/?grep=Parameter%20Names)
 ## USAGE
 
 ```js
