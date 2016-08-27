@@ -125,18 +125,18 @@
                 brace++;
                 continue;
             } else if (char === ":") {
-                if (brace > 0)
+                if (brace > 0) {
                     colon = true;
 
+                    name = "";
+                }
                 continue;
             } else if (char === "}") {
                 brace--;
                 continue;
             }
-            if (brace > 0 && char !== "," && colon === false)
-                continue;
 
-            if (char === ",") {
+            if (char === "," && brace === 0) {
                 add();
                 continue;
             }
